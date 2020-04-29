@@ -1,10 +1,10 @@
-# dow: DApp Over WebRTC
+# DoW: DApp Over WebRTC
 
 ## Overview
 
 The idea is to use WebRTC to share sites and data to build a highly-decentralized and free internet by automatically and transparently using *all* connected devices as nodes.
 
-### Dapps
+### DApps
 
 DApps (Decentralized Applications) are the future of internet. Central servers can suffer several kinds of attacks, natural and governmental interventions, data transfer issues etc. If sites can be spread along several servers around the globe, they can be highly available and faster.
 
@@ -13,10 +13,10 @@ DApps (Decentralized Applications) are the future of internet. Central servers c
 The coming of programmable blockchains, like Ethereum and others, opened a huge market for dapps. Several blockchain alternatives has been developed, like holochain, hashgraph, dag, tangle etc. They are referred to as [Distributed Ledger Technology (DLT)](https://101blockchains.com/blockchain-vs-hashgraph-vs-dag-vs-holochain/).
 
 However, DLTs have some drawbacks:
-* Programming DLTs is not straightforward; developers must learn new languages and paradigmas.
+* Programming DLTs is not straightforward; developers must learn new languages and paradigmas (blockchains etc.).
 * It's necessary to create and maintain digital wallets to serve and to use dapps. Managing wallets is not easy for most users (it's not as simple as typing username and password).
 * It's necessary to pay some value in cryptocurrency tokens to use dapps. This requirement turns difficult to build free services for users. Most users won't buy cryptocurrencies.
-* Some DLTs require users to download and install software in order to use them, which is hard for non-technical users.
+* Some DLTs require users to download and install software in order to use them, which is a barrier for non-technical users.
 
 ### Zeronet
 
@@ -27,17 +27,37 @@ However, DLTs have some drawbacks:
 * It uses well-known languages like Javascript and MySQL.
 * Auto-login for zeronet sites.
 * It's very easy to be a node.
+* No expensive hardware/bandwidth requirements.
 
 The downsides of Zeronet are:
-* User still must download and install Zeronet software in order to use it, and it's not available for all common platforms/OS.
-* For proxies and multiuser sites, it's needed to insert the private key as login, but it's not well documented how to get the own private key.
+* User still must download and install Zeronet software in order to use it, and it's not available for all common platforms/OS (e.g. iOS).
+* For proxies and multiuser sites, user must insert the private key as login, but it's not well documented how to get the own private key.
+* http, not https.
 
 ### WebRTC
 
-TODO
+[WebRTC](https://webrtc.org/) is a technology which permits to exchange data between browsers in a p2p fashion. It was designed to share media streams, but it works with any kind of data. So it can be used to share apps/sites and their data.
 
-### Requeriments for dow
+WebRTC still uses some auxiliary servers for signaling and NAT-traversaling, but also ZeroNet uses trackers to find peers.
 
-* The use must be free, because users already pay for their devices, storage and internet.
-* zero installation
-* automatic use in all devices
+### Requeriments for DoW
+
+* Must work offline.
+* Free: users already pay for their devices and internet.
+* Zero installation.
+* Automatic use in all devices.
+
+One important note here. DoW is not intended for anonimity. No effort will be made to hide the authors of contents, as of most sites works so. The main goal here is to serve apps and data in a decentralized way, for free, transparently for users.
+
+### Security concerns
+
+In this point we must discuss if JS apps should be enabled. Running arbitrary user-coded JS scripts is insecure. However, we trust in JS served by centralized sites/apps. Why not trust on well-known sites served in a decentralized way?
+
+Maybe a safer language must be developed for dapps on DoW, with no direct access to Javascript.
+
+### Next steps
+
+Next step is to develop a simple app to testify the viability of building dapps over WebRTC.
+
+See [WoW](https://github.com/sonysantos/wow/), a Wiki over WebRTC.
+
