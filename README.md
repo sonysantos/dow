@@ -51,13 +51,10 @@ One important note here. DoW is not intended for anonimity. No effort will be ma
 
 ### Security concerns
 
-In this point we must discuss if JS apps should be enabled. Running arbitrary user-coded JS scripts is insecure. However, we trust in JS served by centralized sites/apps. Why not trust on well-known sites served in a decentralized way?
-
-Maybe a safer language must be developed for dapps on DoW, with no direct access to Javascript.
+Apps cannot be made directly in JS because it could easily get access to private data somewhere below `window` or `document`; so it's necessary to build an auxiliary safer language for DApps.
 
 ### Next steps
 
 Next step is to develop a simple app to testify the viability of building dapps over WebRTC.
 
-See [WoW](https://github.com/sonysantos/wow/), a Wiki over WebRTC.
-
+See [Offline Wiki](https://github.com/sonysantos/offline-wiki/).
